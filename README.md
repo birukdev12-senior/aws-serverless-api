@@ -2,7 +2,7 @@
 
 ## 📝 **2. AWS Serverless API README.md**
 
-`github.com/birukdev12-senior/aws-serverless-api` ላይ አዲስ ፋይል `README.md` ፍጠርና ይህን ለጥፍ፦
+`github.com/birukdev12-senior/aws-serverless-api` 
 
 ```markdown
 # ☁️ AWS Serverless REST API
