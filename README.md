@@ -42,14 +42,12 @@ curl -X POST https://aws-serverless-api.onrender.com/api/users \
 
 ## 🛠 Tech Stack
 
-| Area       | Technology                         |
-|------------|------------------------------------|
-| Runtime    | Node.js 18                         |
-| Framework  | Express.js                         |
-| Serverless | serverless‑http (Lambda adapter)   |
-| Validation | express‑validator                    |
-| Database   | DynamoDB (configurable)             |
-| Deployment | Render (live) / AWS Lambda (target)|
+ Runtime     : Node.js 18
+Framework    : Express.js
+Serverless   : serverless‑http (Lambda adapter)
+Validation   : express‑validator
+Database     : DynamoDB (configurable)
+Deployment   : Render (live) / AWS Lambda (target)
 
 🚦 Getting Started
 git clone https://github.com/birukdev12-senior/aws-serverless-api.git
