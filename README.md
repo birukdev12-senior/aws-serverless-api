@@ -1,65 +1,55 @@
----
-
-## 📝 **2. AWS Serverless API README.md**
-
-`github.com/birukdev12-senior/aws-serverless-api` 
-
-```markdown
 # ☁️ AWS Serverless REST API
 
-A production‑ready RESTful API built with Node.js & Express, designed for serverless deployment on AWS Lambda.
+![Node.js](https://img.shields.io/badge/Node.js-18-339933?style=flat-square&logo=nodedotjs)
+![Express](https://img.shields.io/badge/Express-4.x-000000?style=flat-square&logo=express)
+![Render](https://img.shields.io/badge/Live-Render-46E3B7?style=flat-square&logo=render)
+![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
 
-![Node](https://img.shields.io/badge/Node.js-18-green)
-![Express](https://img.shields.io/badge/Express-4.x-black)
-![Render](https://img.shields.io/badge/Deployed-Render-46E3B7)
-![License](https://img.shields.io/badge/License-MIT-blue)
+**Production‑ready REST API** engineered for serverless deployment on AWS Lambda.  
+Built by **Biruk Tsegaye** – Senior Full‑Stack & Cloud Engineer (7+ years of experience).
+
+---
 
 ## 🚀 Live API
-**Base URL:** [`https://aws-serverless-api.onrender.com`](https://aws-serverless-api.onrender.com)
+https://aws-serverless-api.onrender.com
 
-> ⚠️ *Free Render tier — first request may take 30‑60s to wake up.*
+> *First request may take a few seconds while the free instance wakes up.*
+
+## ✨ Key Features
+- ⚡ **Serverless‑ready** – Deploy to AWS Lambda via `serverless‑http`
+- 🔄 **Full CRUD** – Create, Read, Update, Delete operations
+- 🛡 **Validation** – Input sanitization with `express‑validator`
+- ⚠️ **Error Handling** – Centralized JSON error responses
+- 🔐 **JWT‑ready** – Extensible auth middleware
+- 🌍 **CORS** – Cross‑Origin Resource Sharing enabled
 
 ## 📡 API Endpoints
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/` | Health check |
-| `GET` | `/api/users` | Get all users |
-| `POST` | `/api/users` | Create a new user |
-| `PUT` | `/api/users/:id` | Update a user |
-| `DELETE` | `/api/users/:id` | Delete a user |
 
-## 🧪 Quick Test
+| Method | Endpoint          | Description       |
+|--------|-------------------|-------------------|
+| GET    | `/`               | Health check      |
+| GET    | `/api/users`      | List all users    |
+| GET    | `/api/users/:id`  | Get one user      |
+| POST   | `/api/users`      | Create a user     |
+| PUT    | `/api/users/:id`  | Update a user     |
+| DELETE | `/api/users/:id`  | Delete a user     |
+
+**Example request**
 ```bash
-# Health check
-curl https://aws-serverless-api.onrender.com/
-
-# Get users
-curl https://aws-serverless-api.onrender.com/api/users
-
-# Create user
 curl -X POST https://aws-serverless-api.onrender.com/api/users \
   -H "Content-Type: application/json" \
   -d '{"name":"Biruk","email":"biruk@example.com"}'
 
-#🛠 Tech Stack
-| Category   | Technology |
-|------------|------------|
-| Runtime    | Node.js |
-| Framework  | Express.js |
-| Serverless | serverless‑http (AWS Lambda ready) |
-| Validation | express‑validator |
-| Database   | DynamoDB (configurable) |
-| Deployment | Render |
+## 🛠 Tech Stack
 
-📂 Project Structure
-├── index.js              # Entry point + Express app
-├── routes/
-│   └── users.js          # User CRUD routes
-├── middleware/
-│   └── errorHandler.js   # Global error handling
-├── .env.example          # Environment variables template
-├── package.json
-└── README.md
+| Area       | Technology                         |
+|------------|------------------------------------|
+| Runtime    | Node.js 18                         |
+| Framework  | Express.js                         |
+| Serverless | serverless‑http (Lambda adapter)   |
+| Validation | express‑validator                    |
+| Database   | DynamoDB (configurable)             |
+| Deployment | Render (live) / AWS Lambda (target)|
 
 🚦 Getting Started
 git clone https://github.com/birukdev12-senior/aws-serverless-api.git
@@ -67,9 +57,19 @@ cd aws-serverless-api
 npm install
 cp .env.example .env
 npm run dev
-Server runs on http://localhost:3000
+Server runs on http://localhost:3000.
 
 ☁️ Deploy to AWS Lambda
-# Using Serverless Framework
 npm install -g serverless
 serverless deploy
+
+🔒 Security
+
+· Input validation & sanitization
+· Helmet.js ready (HTTP headers)
+· Rate limiting ready
+· Secrets via environment variables
+
+📜 License
+
+MIT – Free to use, modify, and deploy.
